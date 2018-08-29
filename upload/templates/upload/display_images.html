@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for each in all_images %}
+        <div class="row">
+            <div class="col col-sm-3">Upload at: {{ each.uploaded_at }}</div>
+            <div class="col col-sm-7"><img src="{{ each.path.url }}" alt="img" class="img-responsive img-rounded"></div>
+            <hr>
+        </div>
+    {% endfor %}
+{% endblock %}
